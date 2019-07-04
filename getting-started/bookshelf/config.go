@@ -83,7 +83,7 @@ func init() {
 	// More options can be set, see the google package docs for details:
 	// http://godoc.org/golang.org/x/oauth2/google
 	//
-	// DB, err = configureDatastoreDB("<your-project-id>")
+	DB, err = configureDatastoreDB("root-emissary-245712")
 	// [END datastore]
 
 	if err != nil {
@@ -94,8 +94,8 @@ func init() {
 	// To configure Cloud Storage, uncomment the following lines and update the
 	// bucket name.
 	//
-	// StorageBucketName = "<your-storage-bucket>"
-	// StorageBucket, err = configureStorage(StorageBucketName)
+	StorageBucketName = "demobookself"
+	StorageBucket, err = configureStorage(StorageBucketName)
 	// [END storage]
 
 	if err != nil {
@@ -108,7 +108,7 @@ func init() {
 	// You will also need to update OAUTH2_CALLBACK in app.yaml when pushing to
 	// production.
 	//
-	// OAuthConfig = configureOAuthClient("clientid", "clientsecret")
+	OAuthConfig = configureOAuthClient("561182356333-vp7oqe7iel90gv7vluv38ptfef9a5pcs.apps.googleusercontent.com", "OE6ZRTRogRAAAmv_ozLvPli6")
 	// [END auth]
 
 	// [START sessions]
@@ -124,7 +124,7 @@ func init() {
 	// [START pubsub]
 	// To configure Pub/Sub, uncomment the following lines and update the project ID.
 	//
-	// PubsubClient, err = configurePubsub("<your-project-id>")
+	PubsubClient, err = configurePubsub("root-emissary-245712")
 	// [END pubsub]
 
 	if err != nil {
